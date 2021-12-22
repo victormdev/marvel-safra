@@ -12,4 +12,14 @@
         'nvd3'
     ]);
 
+    // route definitions
+    as.config(function($routeProvider, $httpProvider) {
+        
+        $routeProvider
+            .when('/', { templateUrl: '' })
+            .when('/find', { templateUrl: '' })
+
+            .otherwise({ redirectTo: '/' });
+    });
+
 }());
