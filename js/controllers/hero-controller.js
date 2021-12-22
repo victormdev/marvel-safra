@@ -7,7 +7,7 @@
 
         $scope.load = function () {
 
-            Heroervice.getAll()
+            Heroervice.getHeroes()
             .success(function (result, status, headers, config) {
                 $scope.heroList = result;
             });
