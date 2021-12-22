@@ -1,7 +1,7 @@
 (function () {
     var as = angular.module('app.controllers');
 
-    as.controller('HeroShowCtrl', ['$scope', '$rootScope', '$http', '$location', 'HeroService', function ($scope, $rootScope, $http, $location, RadioService) {
+    as.controller('HeroShowCtrl', ['$scope', '$rootScope', '$http', '$location', 'HeroService', function ($scope, $rootScope, $http, $location, HeroService) {
 
         $scope.heroList = [];
 
