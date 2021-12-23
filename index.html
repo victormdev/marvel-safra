@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="HeroMarvel">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -10,32 +10,32 @@
     <link href="lib/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     
+
     <!-- angular libs -->
     <script type="text/javascript" src="lib/angular-1.8.2/angular.js"></script>
     <script type="text/javascript" src="lib/angular-1.8.2/angular-route.min.js"></script>
     <script type="text/javascript" src="lib/angular-1.8.2/angular-resource.min.js"></script>
+    <!-- controllers -->
+    <script src="js/controllers/app-controller.js"></script>
+    <script src="js/controllers/hero/hero-controller.js"></script>
 
 </head>
-<body>
+<body >
     <div class="nav">
         <img src="img/logo.jpg" />
         <h1>Olá! ❤️ <br> Seja bem-vindo(a) ao nosso localizador!</h1>
     </div>
-    <div class="search">
+    <div ng-controller="HeroCtrl" class="search">
         <div class="form">
-            <label>Nome</label>
-            <input placeholder="Digite o nome do herói aqui">
+            <label>Nome {{2 + 3}}</label>
+            <input type="text" ng-model="asyncSelected" typeahead="characters for characters in getCharacters($viewValue)" typeahead-loading="loadingCharacters"  typeahead-on-select="selectCharacter($item);asyncSelected=''"  placeholder="Digite o nome do herói aqui">
             <button class="btn">Localizar 👀</button>
         </div>
         
-        <div class="card-list">
-            <h1>Nome do herói</h1>
+        <div ng-if="showCharInfo" class="card-list">
+            <h1>Nome do herói - {{ char.name }}</h1>
         </div>
     </div>
-
-<!-- controllers -->
-<script type="text/javascript" src="js/controllers/app-controller.js"></script>
-<script type="text/javascript" src="js/controllers/hero/hero-controller.js"></script>
 
 <!-- services -->
 <script type="text/javascript" src="js/services/app-service.js"></script>
