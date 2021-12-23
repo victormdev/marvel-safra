@@ -1,3 +1,4 @@
+/* import font  */
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Londrina+Solid:wght@300&display=swap');
 
 body {
@@ -22,7 +23,7 @@ body {
     background-color: rgb(221, 221, 221);
     margin: auto;
     width: 60%;
-    height: 500px;
+    height: 600px;
     background: #fff;
     border-radius: 30px;
     padding: 10px;
@@ -33,6 +34,7 @@ body {
     text-align: center;
     display: grid;
     padding: 15px;
+    margin-bottom: 30px;
 }
 
 .btn{
@@ -73,4 +75,22 @@ body {
 
 .form button:hover {
     margin-top: 20px;
+}
+
+.card-list {
+    background: linear-gradient(to right, rgb(255, 0, 0), orange);
+    text-align: center;
+    display: grid;
+    padding: 15px;
+    width: 50%;
+    margin: auto;
+    border-radius: 30px;
+    height: 300px;
+}
+.card-list:hover {
+    background: linear-gradient(to right, orange, rgb(255, 0, 0));
+}
+
+.card-list h1 {
+    color: #fff;
 }
