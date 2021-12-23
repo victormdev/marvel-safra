@@ -31,9 +31,10 @@
             <input type="text" ng-model="asyncSelected" typeahead="characters for characters in getCharacters($viewValue)" typeahead-loading="loadingCharacters"  typeahead-on-select="selectCharacter($item);asyncSelected=''"  placeholder="Digite o nome do herói aqui">
             <button class="btn">Localizar 👀</button>
         </div>
-        
-        <div ng-if="showCharInfo" class="card-list">
-            <h1>Nome do herói - {{ char.name }}</h1>
+
+        <!-- adicionar ng-if aqui pra mostrar o resultado -->
+        <div class="card-list">
+            <h1>Nome do herói {{ char.name }}</h1>
         </div>
     </div>
 

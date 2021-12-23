@@ -7,7 +7,7 @@
 
         // publicKey
         HeroServiceOp.getHeroes = function (name) {
-            
+
             return $http.get(CONSTANTS.API_URL + '/v1/public/characters', {
                 params: {
                     publicKey: '5234a931fdd1da574fb6133e31a6d02c'
