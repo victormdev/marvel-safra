@@ -1,5 +1,5 @@
 (function () {
-    var as = angular.module('app.services');
+    var as = angular.module('app.services', []);
 
     as.factory('HeroService', ['$q', '$http', '$location', 'CONSTANTS']);
 
