@@ -19,6 +19,7 @@
             API_URL: 'http://gateway.marvel.com',    // api location
             PAGE_REFRESH_TIME: 5000         // milliseconds
         }
+        
     })());
 
     // route definitions
