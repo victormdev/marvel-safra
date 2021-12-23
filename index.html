@@ -8,6 +8,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.jpg">
 
     <link href="lib/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     
     <!-- angular libs -->
     <script type="text/javascript" src="lib/angular-1.8.2/angular.js"></script>
@@ -16,8 +17,17 @@
 
 </head>
 <body>
-<h1>{{2 + 1}}</h1>
-
+    <div class="nav">
+        <img src="img/logo.jpg" />
+        <h1>Olá! ❤️ <br> Seja bem-vindo(a) ao nosso localizador!</h1>
+    </div>
+    <div class="search">
+        <div class="form">
+            <label>Nome</label>
+            <input placeholder="Digite o nome do herói aqui">
+            <button class="btn">Localizar 👀</button>
+        </div>
+    </div>
 
 <!-- controllers -->
 <script type="text/javascript" src="js/controllers/app-controller.js"></script>
