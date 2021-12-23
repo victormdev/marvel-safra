@@ -1,5 +1,5 @@
 (function () {
-    var as = angular.module('app.services', []);
+    var as = angular.module('app.services', ['ngRoute']);
 
     as.factory('AppService', ['$q', '$http', '$rootScope', '$location', 'CONSTANTS']);
 

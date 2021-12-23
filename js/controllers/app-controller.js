@@ -1,5 +1,5 @@
 (function() {
-    var as = angular.module('app.controllers', ['ngRoute','ui.bootstrap','ngResource']);
+    var as = angular.module('app.controllers', ['ngRoute', 'ngResource']);
     
     as.controller('AppCtrl', 
         ['$scope', '$rootScope', '$http', '$location', 'AppService', 'HeroService', 'ngResource', 'CONSTANTS',
