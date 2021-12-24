@@ -15,10 +15,12 @@
     console.log(hash);
 
     function getCharacters() {
+      $scope.heroes = {};
       $q.when(axios.get(baseUrl + "/characters" + complemento)
         .then(function (res) {
-          console.log(res.data.data)
-          return res.data.data;
+          console.log(res.data.data.results)
+          $scope.heroes = res.data.data.results;
+          console.log($scope.heroes);
         })
         .catch(function (err) {
           console.log(err)
