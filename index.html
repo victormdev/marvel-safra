@@ -1,26 +1,29 @@
 <!doctype html>
 <html ng-app="HeroMarvel">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Descubra o seu herói! ❤️</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.jpg">
 
     <link href="lib/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    
 
     <!-- angular libs -->
     <script type="text/javascript" src="lib/angular-1.8.2/angular.js"></script>
     <script type="text/javascript" src="lib/angular-1.8.2/angular-route.min.js"></script>
     <script type="text/javascript" src="lib/angular-1.8.2/angular-resource.min.js"></script>
+
     <!-- controllers -->
     <script src="js/controllers/app-controller.js"></script>
     <script src="js/controllers/hero/hero-controller.js"></script>
 
 </head>
-<body >
+
+<body>
     <div class="nav">
         <img src="img/logo.jpg" />
         <h1>Olá! ❤️ <br> Seja bem-vindo(a) ao nosso localizador!</h1>
@@ -28,7 +31,7 @@
     <div ng-controller="HeroCtrl" class="search">
         <div class="form">
             <label>Nome</label>
-            <input type="text"  placeholder="Digite o nome do herói aqui">
+            <input type="text" placeholder="Digite o nome do herói aqui">
             <button class="btn">Localizar 👀</button>
         </div>
 
@@ -38,17 +41,24 @@
         </div>
     </div>
 
-<!-- services -->
-<script type="text/javascript" src="js/services/app-service.js"></script>
-<script type="text/javascript" src="js/services/hero/hero-service.js"></script>
+    <!-- services -->
+    <script type="text/javascript" src="js/services/app-service.js"></script>
+    <script type="text/javascript" src="js/services/hero/hero-service.js"></script>
 
-<!-- jquery -->
-<script type="text/javascript" src="lib/jquery-2.2.4/jquery-2.2.4.min.js"></script>
-<script type="text/javascript" src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <!-- md5 -->
+    <script type="text/javascript" src="lib/md5/md5.min.js"></script>
 
-<!-- configurations -->
-<script type="text/javascript" src="js/angular-config.js"></script>
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- jquery -->
+    <script type="text/javascript" src="lib/jquery-2.2.4/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <!-- configurations -->
+    <script type="text/javascript" src="js/angular-config.js"></script>
 
 
 </body>
+
 </html>
