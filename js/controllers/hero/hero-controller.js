@@ -14,30 +14,30 @@
 
     console.log(hash);
 
-    function getCharacters() {
-      $scope.heroes = {};
-      $q.when(axios.get(baseUrl + "/characters" + complemento)
-        .then(function (res) {
-          console.log(res.data.data.results)
-          $scope.heroes = res.data.data.results;
-          console.log($scope.heroes);
-        })
-        .catch(function (err) {
-          console.log(err)
-        }));
-    }
+    $scope.getCharacters = function (val) {
+      return $http.get(baseUrl + "characters" + complemento, {
 
-    getCharacters();
+      }).then(function (response) {
+        $scope.charInfoArr = response.data.data.results;
+        return response.data.data.results.map(function (item) {
+          console.log(response.data.data.results);
+          $scope.heroes = response.data.data.results;
+          return item.name;
+        });
+      });
+    };
+    $scope.getCharacters();
 
-    function getCharacter(id) {
-      $q.when(axios.get(baseUrl + "/characters/" + id + complemento)
+    $scope.getCharacter = function (id) {
+      axios.get(baseUrl + "/characters/" + id + complemento)
         .then(function (res) {
           console.log(res.data.data)
         })
         .catch(function (err) {
           console.log(err)
-        }));
+        });
     }
 
   });
+
 }());

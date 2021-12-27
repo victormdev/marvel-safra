@@ -34,11 +34,13 @@
             <input type="text" placeholder="Digite o nome do herói aqui">
             <button class="btn">Localizar 👀</button>
         </div>
-
-        <!-- adicionar ng-if aqui pra mostrar o resultado -->
-        <div class="card-list">
-            <h1>Nome do herói {{ heroes.name }}</h1>
-        </div>
+        <div class="scroll">
+            <div ng-repeat="hero in heroes" class="card-list">
+                <h1>{{ teste }}</h1>
+                <h1>{{ hero.name }}</h1>
+            </div>
+        </div> 
+        
     </div>
 
     <!-- services -->
