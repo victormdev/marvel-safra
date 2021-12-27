@@ -34,22 +34,21 @@
             <input type="text" placeholder="Digite o nome do herói aqui" ng-model="search">
         </div>
         <div class="scroll">
-            <div ng-click="showHero($index)" ng-model="$index" ng-repeat="hero in heroes | filter:search"
+            <div ng-click="getCharacter(hero.id)" ng-model="$index" ng-repeat="hero in heroes | filter:search"
                 class="card-list">
                 <h1>{{ hero.name }}</h1>
             </div>
         </div>
         <div ng-if="showDetails" class="detail-list">
             <h4 style="color: rgb(255, 255, 255); margin-bottom: 80px;">Arraste pra baixo 👇</h4>
-            <img class="photo" src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}" alt="Card image cap"
+            <img class="photo" src="{{selected[0].thumbnail.path}}.{{selected[0].thumbnail.extension}}" alt="Card image cap"
                 width="100" height="100">
-            <h1>{{ hero.name }}</h1>
+            <h1>{{ selected[0].name }}</h1>
             <span style="color: rgb(255, 255, 255);"><b>HISTÓRIAS</b></span>
-            <div ng-repeat="story in hero.stories.items">
+            <div ng-repeat="story in selected[0].stories.items">
                 <a href="" style="color: rgb(255, 255, 255);">
                     <span> {{story.name}}</span>
                 </a>
-
             </div>
         </div>
     </div>

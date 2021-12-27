@@ -23,7 +23,6 @@
         }
 
       }).then(function (response) {
-        $scope.charInfoArr = response.data.data.results;
         return response.data.data.results.map(function (item) {
           console.log(response.data.data.results);
           $scope.heroes = response.data.data.results;
@@ -32,12 +31,19 @@
     };
     $scope.getCharacters();
 
-    $scope.showHero = function(index){
-      $scope.hero = $scope.heroes[index];
-      $scope.edit = true;
-      $scope.showDetails = true;
-  };
+    $scope.getCharacter = function (id) {
+      return $http.get(baseUrl + "characters/" + id + complemento, {
 
+      }).then(function (res) {
+        $scope.edit = true;
+        $scope.showDetails = true;
+        $scope.selected = res.data.data.results;
+        return res.data.data.results.map(function (item) {
+          console.log(res.data.data)
+          $scope.selected = res.data.data.results;
+        });
+      });
+    };
 
   });
 
