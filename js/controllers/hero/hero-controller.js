@@ -9,7 +9,7 @@
 
     var hash = md5(ts + privateKey + publicKey).toString();
 
-    var baseUrl = "http://gateway.marvel.com/v1/public/";
+    var baseUrl = "https://gateway.marvel.com/v1/public/";
     var complemento = "?ts=" + ts + "&apikey=" + publicKey + "&hash=" + hash;
 
     console.log(hash);
