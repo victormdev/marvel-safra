@@ -13,30 +13,31 @@
     var complemento = "?ts=" + ts + "&apikey=" + publicKey + "&hash=" + hash;
 
     console.log(hash);
-
+    $scope.char = {};
+    $scope.showCharInfo = false;
     $scope.getCharacters = function (val) {
       return $http.get(baseUrl + "characters" + complemento, {
+        params: {
+          nameStartsWith: val,
+          limit: 50,
+        }
 
       }).then(function (response) {
         $scope.charInfoArr = response.data.data.results;
         return response.data.data.results.map(function (item) {
           console.log(response.data.data.results);
           $scope.heroes = response.data.data.results;
-          return item.name;
         });
       });
     };
     $scope.getCharacters();
 
-    $scope.getCharacter = function (id) {
-      axios.get(baseUrl + "/characters/" + id + complemento)
-        .then(function (res) {
-          console.log(res.data.data)
-        })
-        .catch(function (err) {
-          console.log(err)
-        });
-    }
+    $scope.showHero = function(index){
+      $scope.hero = $scope.heroes[index];
+      $scope.edit = true;
+      $scope.showDetails = true;
+  };
+
 
   });
 
