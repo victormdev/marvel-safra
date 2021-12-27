@@ -34,7 +34,8 @@
             <input type="text" placeholder="Digite o nome do herói aqui" ng-model="search">
         </div>
         <div class="scroll">
-            <div ng-click="getCharacter(hero.id)" ng-model="$index" ng-repeat="hero in heroes | filter:search"
+            <h4>Navegue pra o lado e clique para exibir👉</h4>
+            <div ng-click="getCharacter(hero.id)" ng-repeat="hero in heroes | filter:search"
                 class="card-list">
                 <h1>{{ hero.name }}</h1>
             </div>
